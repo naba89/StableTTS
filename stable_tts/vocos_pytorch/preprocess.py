@@ -6,7 +6,7 @@ import torch
 from torch import Tensor
 from torch.multiprocessing import Pool, set_start_method
 import torchaudio
-from config import MelConfig,  TrainConfig
+from stable_tts.config import MelConfig,  TrainConfig
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 

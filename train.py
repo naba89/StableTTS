@@ -17,9 +17,9 @@ from datas.dataset import StableDataset, collate_fn
 from datas.sampler import DistributedBucketSampler
 from text import symbols
 from config import MelConfig, ModelConfig, TrainConfig
-from utils.scheduler import get_cosine_schedule_with_warmup
-from utils.load import continue_training
-from utils.plot import plot_alignment_to_numpy
+from stable_tts.utils.scheduler import get_cosine_schedule_with_warmup
+from stable_tts.utils.load import continue_training
+from stable_tts.utils.plot import plot_alignment_to_numpy
 
 torch.backends.cudnn.benchmark = True
     

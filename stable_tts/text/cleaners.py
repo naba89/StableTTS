@@ -3,9 +3,9 @@ import string
 import numpy as np
 from .langdetect import detect, LangDetectException
 
-from text.english import english_to_ipa2
-from text.mandarin import chinese_to_cnm3
-from text.japanese import japanese_to_ipa2
+from stable_tts.text.english import english_to_ipa2
+from stable_tts.text.mandarin import chinese_to_cnm3
+from stable_tts.text.japanese import japanese_to_ipa2
 
 language_module_map = {"PAD":0, "ZH": 1, "EN": 2, "JA": 3}
 

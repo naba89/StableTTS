@@ -17,10 +17,10 @@ from models.model import Vocos
 from dataset import VocosDataset
 from models.discriminator import MultiPeriodDiscriminator, MultiResolutionDiscriminator
 from models.loss import feature_loss, generator_loss, discriminator_loss
-from utils.audio import LogMelSpectrogram
+from stable_tts.utils.audio import LogMelSpectrogram
 from config import MelConfig, VocosConfig, TrainConfig
-from utils.scheduler import get_cosine_schedule_with_warmup
-from utils.load import continue_training
+from stable_tts.utils.scheduler import get_cosine_schedule_with_warmup
+from stable_tts.utils.load import continue_training
 
 torch.backends.cudnn.benchmark = True
     

@@ -3,8 +3,8 @@ import torch
 import torchaudio
 from torch.utils.data import Dataset
 
-from utils.audio import LogMelSpectrogram
-from config import MelConfig
+from stable_tts.utils.audio import LogMelSpectrogram
+from stable_tts.config import MelConfig
     
 class VocosDataset(Dataset):
     def __init__(self, filelist_path, segment_size: int, mel_config: MelConfig):

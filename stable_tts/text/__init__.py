@@ -1,6 +1,6 @@
 """ from https://github.com/keithito/tacotron """
-from text import cleaners
-from text.symbols import symbols
+from stable_tts.text import cleaners
+from stable_tts.text.symbols import symbols
 
 
 # Mappings from symbol to numeric ID and vice versa:

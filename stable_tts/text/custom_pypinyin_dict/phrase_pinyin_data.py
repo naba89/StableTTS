@@ -3,11 +3,11 @@ from __future__ import unicode_literals
 
 from pypinyin import load_phrases_dict
 
-from text.custom_pypinyin_dict import cc_cedict_0
-from text.custom_pypinyin_dict import cc_cedict_1
-from text.custom_pypinyin_dict import cc_cedict_2
-from text.custom_pypinyin_dict import cc_cedict_3
-from text.custom_pypinyin_dict import genshin
+from stable_tts.text.custom_pypinyin_dict import cc_cedict_0
+from stable_tts.text.custom_pypinyin_dict import cc_cedict_1
+from stable_tts.text.custom_pypinyin_dict import cc_cedict_2
+from stable_tts.text.custom_pypinyin_dict import cc_cedict_3
+from stable_tts.text.custom_pypinyin_dict import genshin
 
 phrases_dict = {}
 phrases_dict.update(cc_cedict_0.phrases_dict)

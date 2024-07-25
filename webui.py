@@ -7,7 +7,7 @@ from text import symbols
 import torch
 import torchaudio
 
-from utils.audio import LogMelSpectrogram
+from stable_tts.utils.audio import LogMelSpectrogram
 from config import ModelConfig, VocosConfig, MelConfig
 from models.model import StableTTS
 from vocos_pytorch.models.model import Vocos

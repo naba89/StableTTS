@@ -1,3 +1,4 @@
+import os
 import re
 from pypinyin import lazy_pinyin, Style
 from .custom_pypinyin_dict import phrase_pinyin_data
@@ -76,7 +77,8 @@ def load_pinyin_dict(path):
             key, value = line.strip().split(',', 1)
             pinyin_dict[key] = value.split()
     return pinyin_dict
-pinyin_dict = load_pinyin_dict('text/cnm3/ds_CNM3.txt')
+this_dir = os.path.dirname(os.path.abspath(__file__))
+pinyin_dict = load_pinyin_symbols(os.path.join(this_dir, 'cnm3', 'ds_CNM3.txt'))
 
 def chinese_to_cnm3(text: str):
     text = text.translate(punc_table)

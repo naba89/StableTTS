@@ -2,11 +2,11 @@ import math
 import torch
 import torch.nn as nn
 
-import monotonic_align
-from models.text_encoder import TextEncoder
-from models.flow_matching import CFMDecoder
-from models.reference_encoder import MelStyleEncoder
-from models.duration_predictor import DurationPredictor, duration_loss
+import stable_tts.monotonic_align as monotonic_align
+from stable_tts.models.text_encoder import TextEncoder
+from stable_tts.models.flow_matching import CFMDecoder
+from stable_tts.models.reference_encoder import MelStyleEncoder
+from stable_tts.models.duration_predictor import DurationPredictor, duration_loss
 
 def sequence_mask(length: torch.Tensor, max_length: int = None) -> torch.Tensor:
     if max_length is None:

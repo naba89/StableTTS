@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from models.dit import DiTConVBlock
+from stable_tts.models.dit import DiTConVBlock
 
 class DitWrapper(nn.Module):
     """ add FiLM layer to condition time embedding to DiT """

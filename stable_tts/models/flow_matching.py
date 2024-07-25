@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from models.estimator import Decoder
+from stable_tts.models.estimator import Decoder
 
 # copied from https://github.com/jaywalnut310/vits/blob/main/commons.py#L121
 def sequence_mask(length: torch.Tensor, max_length: int = None) -> torch.Tensor:

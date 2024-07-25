@@ -6,7 +6,7 @@ from torch import Tensor
 
 from .head import ISTFTHead
 from .backbone import VocosBackbone
-from config import MelConfig, VocosConfig
+from stable_tts.config import MelConfig, VocosConfig
     
 class Vocos(nn.Module):
     def __init__(self, vocos_config: VocosConfig, mel_config: MelConfig):

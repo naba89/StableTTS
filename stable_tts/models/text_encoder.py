@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from models.dit import DiTConVBlock
+from stable_tts.models.dit import DiTConVBlock
 
 def sequence_mask(length: torch.Tensor, max_length: int = None) -> torch.Tensor:
     if max_length is None:

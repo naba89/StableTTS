@@ -4,7 +4,7 @@ import json
 import torch
 from torch.utils.data import Dataset
 
-from text import cleaned_text_to_sequence
+from stable_tts.text import cleaned_text_to_sequence
 
 def intersperse(lst, item):
   result = [item] * (len(lst) * 2 + 1)
