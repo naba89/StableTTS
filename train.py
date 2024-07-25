@@ -12,11 +12,11 @@ from torch.utils.tensorboard import SummaryWriter
 from dataclasses import asdict
 from tqdm import tqdm
 
-from models.model import StableTTS
-from datas.dataset import StableDataset, collate_fn
-from datas.sampler import DistributedBucketSampler
-from text import symbols
-from config import MelConfig, ModelConfig, TrainConfig
+from stable_tts.models.model import StableTTS
+from stable_tts.datas.dataset import StableDataset, collate_fn
+from stable_tts.datas.sampler import DistributedBucketSampler
+from stable_tts.text import symbols
+from stable_tts.config import MelConfig, ModelConfig, TrainConfig
 from stable_tts.utils.scheduler import get_cosine_schedule_with_warmup
 from stable_tts.utils.load import continue_training
 from stable_tts.utils.plot import plot_alignment_to_numpy

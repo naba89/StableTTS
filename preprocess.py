@@ -6,10 +6,10 @@ import torch
 from torch.multiprocessing import Pool, set_start_method
 import torchaudio
 
-from config import MelConfig, TrainConfig
-from text.mandarin import chinese_to_cnm3
-from text.english import english_to_ipa2
-from text.japanese import japanese_to_ipa2
+from stable_tts.config import MelConfig, TrainConfig
+from stable_tts.text.mandarin import chinese_to_cnm3
+from stable_tts.text.english import english_to_ipa2
+from stable_tts.text.japanese import japanese_to_ipa2
 from stable_tts.utils.audio import LogMelSpectrogram, load_and_resample_audio
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
