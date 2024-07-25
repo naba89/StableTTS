@@ -53,9 +53,10 @@ class StableTTSEN(nn.Module, ModuleUtilsMixin):
                          device=self.device).unsqueeze(0)
         x_len = torch.tensor([x.size(-1)], dtype=torch.long, device=self.device)
         waveform, sr = torchaudio.load(speaker_prompt)
+        waveform = waveform.to(self.device)
         if sr != self.sample_rate:
             waveform = torchaudio.functional.resample(waveform, sr, self.sample_rate)
-        y = self.mel_extractor(waveform).to(self.device)
+        y = self.mel_extractor(waveform)
 
         # inference
         mel = self.tts_model.synthesise(x, x_len, self.step, y=y, temperature=0.667, length_scale=1)['decoder_outputs']
