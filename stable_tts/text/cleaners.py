@@ -4,8 +4,6 @@ import numpy as np
 from .langdetect import detect, LangDetectException
 
 from stable_tts.text.english import english_to_ipa2
-from stable_tts.text.mandarin import chinese_to_cnm3
-from stable_tts.text.japanese import japanese_to_ipa2
 
 language_module_map = {"PAD":0, "ZH": 1, "EN": 2, "JA": 3}
 
@@ -60,8 +58,10 @@ def cjke_cleaners4(text: str):
             temp_text += text[pointer]
             pointer += 1
         if current_language == 'ZH':
+            from stable_tts.text.mandarin import chinese_to_cnm3
             output += chinese_to_cnm3(temp_text)
         elif current_language == 'JA':
+            from stable_tts.text.japanese import japanese_to_ipa2
             output += japanese_to_ipa2(temp_text)
         elif current_language == 'EN':
             output += english_to_ipa2(temp_text)
