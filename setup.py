@@ -12,5 +12,12 @@ setup(
     author="Nabarun Goswami",
     author_email="nabarungoswami@mi.t.u-tokyo.ac.jp",
     packages=find_packages(),
+    package_data={
+        'stable_tts': [
+            'text/cnm3/*',  # Include all files in text/cnm3 directory
+            'text/langdetect/profiles/*',  # Include all files in text/langdetect/profiles directory
+            'text/langdetect/utils/messages.properties',  # Include messages.properties file in text/langdetect/utils directory
+        ],
+    },
     install_requires=required
 )
